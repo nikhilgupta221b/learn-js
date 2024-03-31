@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cricket Game</title>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bat Ball Stump Game</h1>
+    <button onclick="
+        let userChoice = 'Bat';
+        let computerChoice;
+        let result;
+        let number = Math.random() * 3;
+        if (number < 1){
+            computerChoice = 'Bat';
+            result = `It's a tie.`;
+        } 
+        else if (number < 2){
+            computerChoice = 'Ball';
+            result = 'You Win.'
+        } 
+        else {
+            computerChoice = 'Stump';
+            result = 'Computer Wins.'
+        }
+        alert(`You chose ${userChoice}. Computer chose ${computerChoice}. ${result}`);
+        // Print Result
+    ">Bat</button>
+    <button
+    onclick="
+        let userChoice = 'Ball';
+        let computerChoice;
+        let result;
+        let number = Math.random() * 3;
+        if (number < 1){
+            computerChoice = 'Bat';
+            result = `Computer Wins.`;
+        } 
+        else if (number < 2){
+            computerChoice = 'Ball';
+            result = `It's a tie.`
+        } 
+        else {
+            computerChoice = 'Stump';
+            result = `You Win.`
+        }
+        alert(`You chose ${userChoice}. Computer chose ${computerChoice}. ${result}`);
+        // Print Result
+    "
+    >Ball</button>
+    <button
+    onclick="
+        let userChoice = 'Stump';
+        let computerChoice;
+        let result;
+        let number = Math.random() * 3;
+        if (number < 1){
+            computerChoice = 'Bat';
+            result = `You win.`;
+        } 
+        else if (number < 2){
+            computerChoice = 'Ball';
+            result = `Computer wins.`
+        } 
+        else {
+            computerChoice = 'Stump';
+            result = `It's a tie.`
+        }
+        alert(`You chose ${userChoice}. Computer chose ${computerChoice}. ${result}`);
+        // Print Result
+    "
+    >Stump</button>
+</body>
+</html>

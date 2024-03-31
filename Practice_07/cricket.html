@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Cricket Game</title>
+    <style>
+      body {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Bat Ball Stump Game</h1>
+    <button
+      onclick="
+        alert(whoWon('Bat'));
+    "
+    >
+      Bat
+    </button>
+    <button
+      onclick="
+        alert(whoWon('Ball'));
+    "
+    >
+      Ball
+    </button>
+    <button
+      onclick="
+        alert(whoWon('Stump'));
+    "
+    >
+      Stump
+    </button>
+
+    <script>
+      let score = {
+        won: 0,
+        lost: 0,
+        tie: 0,
+        displayScore: function() {
+          return `Won: ${this.won}, Lost: ${this.lost}, Tied: ${this.tie}.`;
+        }
+      }
+
+      function whoWon(userChoice) {
+        let computerChoice;
+        let number = Math.random() * 3;
+        if (number < 1) computerChoice = "Bat";
+        else if (number < 2) computerChoice = "Ball";
+        else computerChoice = "Stump";
+
+        if (userChoice === "Bat") {
+          if (computerChoice === "Bat"){
+            score.tie++;
+            return `You chose ${userChoice}. Computer chose ${computerChoice}.
+            It's a tie.
+            ${score.displayScore()}`;
+          }
+          else if (computerChoice === "Ball"){
+            score.won++;
+            return `You chose ${userChoice}. Computer chose ${computerChoice}.
+            You win.
+            ${score.displayScore()}`;
+          }
+          else if (computerChoice === "Stump"){
+            score.lost++;
+            return `You chose ${userChoice}. Computer chose ${computerChoice}.
+            Computer wins.
+            ${score.displayScore()}`;
+          }
+        }
+        if (userChoice === "Ball") {
+          if (computerChoice === "Bat"){
+            score.lost++;
+            return `You chose ${userChoice}. Computer chose ${computerChoice}.
+            Computer wins.
+            ${score.displayScore()}`;
+          }
+          else if (computerChoice === "Ball"){
+            score.tie++;
+            return `You chose ${userChoice}. Computer chose ${computerChoice}.
+            It's a tie.
+            ${score.displayScore()}`;
+          }
+          else if (computerChoice === "Stump"){
+            score.won++;
+            return `You chose ${userChoice}. Computer chose ${computerChoice}.
+            You win.
+            ${score.displayScore()}`;
+          }
+        }
+        if (userChoice === "Stump") {
+          if (computerChoice === "Bat"){
+            score.won++;
+            return `You chose ${userChoice}. Computer chose ${computerChoice}.
+            You win.
+            ${score.displayScore()}`;
+          }
+          else if (computerChoice === "Ball"){
+            score.lost++;
+            return `You chose ${userChoice}. Computer chose ${computerChoice}.
+            Computer wins.
+            ${score.displayScore()}`;
+          }
+          else if (computerChoice === "Stump"){
+            score.tie++;
+            return `You chose ${userChoice}. Computer chose ${computerChoice}.
+            It's a tie.
+            ${score.displayScore()}`;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+.button {
+    color: red;
+}
+#addtobag {
+    background-color: greenyellow;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 10px;
+}
+#wishlist {
+    border: 1px solid black;
+    padding: 5px 20px;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+#addtwo {
+    background-color: greenyellow;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 10px;
+}

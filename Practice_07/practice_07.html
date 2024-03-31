@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Practice 07</title>
+</head>
+<body>
+    <script>
+        //first task
+        let tshirt = {
+            name: 'black T',
+            size: 32,
+        };
+
+        //second task
+        let x = {
+            value: 5,
+        };
+        let y = x;
+        console.log(x.value);
+        y.value += 5;
+        console.log(x.value);
+
+        //third task
+        let jeans = {
+            name: 'black T',
+            size: 32,
+            'delivery-time': 2,
+        };
+        console.log(jeans['delivery-time']);
+
+        //fourth task
+        let obj = {
+            message: 'good job',
+            status: 'complete',
+        };
+        let {message} = obj;
+        let {status} = obj;
+        console.log(message);
+        console.log(status);
+
+        //fifth task
+        let cloth1 = {
+            name: 'tshirt1',
+            size: 32,
+        };
+        let cloth2 = {
+            name: 'tshirt1',
+            size: 32,
+        };
+        let num = 1;
+        function isIdenticalProduct(obj1, obj2){
+            if (typeof obj1 !== 'object' || typeof obj2 !== 'object'){
+                console.warn('Input is not object.');
+                return 'Different';
+            }
+            if (obj1 == obj2) return 'Same';
+            if (obj1.name === obj2.name && obj1.size === obj2.size) return 'Same';
+            else return 'Different';
+        }
+        let result = isIdenticalProduct(cloth1, cloth2);
+        console.log(result);
+    </script>
+</body>
+</html>
