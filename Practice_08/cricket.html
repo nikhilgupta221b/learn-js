@@ -1,0 +1,54 @@
+<!-- This is working fine just need final touch. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Cricket Game</title>
+    <style>
+      body {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Bat Ball Stump Game</h1>
+    <button
+      onclick="
+        whoWon('Bat');
+    "
+    >
+      Bat
+    </button>
+    <button
+      onclick="
+        whoWon('Ball');
+    "
+    >
+      Ball
+    </button>
+    <button
+      onclick="
+        whoWon('Stump');
+    "
+    >
+      Stump
+    </button>
+
+    <button
+      onclick="
+      clearPressed();
+    "
+    >
+      Clear
+    </button>
+
+    <h3 id="user-choice">You chose Bat</h3>
+    <h3 id="computer-choice">Computer chose this</h3>
+    <h3 id="result">You won.</h3>
+    <h3 id="score">Score</h3>
+    <h1></h1>
+
+    <script src="./cricket.js">
+      
+    </script>
+  </body>
+</html>

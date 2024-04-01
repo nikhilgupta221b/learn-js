@@ -1,0 +1,49 @@
+<!-- This is working fine just need final touch. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Cricket Game</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <h1>Bat Ball Stump Game</h1>
+    <button class="image"
+      onclick="
+        whoWon('Bat');
+    "
+    >
+      <img src="bat.png" alt="Bat image">
+    </button>
+    <button class="image"
+      onclick="
+        whoWon('Ball');
+    "
+    >
+    <img src="ball.png" alt="Ball image">
+    </button>
+    <button class="image"
+      onclick="
+        whoWon('Stump');
+    "
+    >
+    <img src="stump.png" alt="Stump image">
+    </button>
+
+    <h3 id="user-choice">You chose Bat</h3>
+    <h3 id="computer-choice">Computer chose this</h3>
+    <h3 id="result">You won.</h3>
+    <h3 id="score">Score</h3>
+
+    <button
+      onclick="
+      clearPressed();
+    "
+    >
+      Clear
+    </button>
+
+    <script src="index.js">
+      
+    </script>
+  </body>
+</html>

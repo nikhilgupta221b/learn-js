@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Practice 08</title>
+    <style>
+        #button {
+            border: 1px solid black;
+            border-radius: 5px;
+            height: 50px;
+            width: 50px;
+        }
+        .js-green {
+            background-color: greenyellow;
+        }
+        .js-aqua {
+            background-color: aqua;
+        }
+
+    </style>
+</head>
+<body>
+    <button id="button" class="" onclick="
+        buttonPressed();
+        ">
+    </button>
+    <script>
+        // //Task 1 and 2
+        // let name = 'Nikhil';
+        // let date = new Date();
+        // let hour = date.getHours();
+        // if (hour < 12) console.log(`Good Morning ${name}`);
+        // else if (hour < 18) console.log(`Good Afternoon ${name}`);
+        // else console.log(`Good Night ${name}!`);
+
+        //Task 3
+        let count;
+        count = localStorage.getItem('Count') || 0;
+        function buttonPressed(){
+            count++;
+            localStorage.setItem('Count', count);
+            updateCount();
+        }
+        
+        function updateCount(){
+            document.querySelector('#button').innerText = count;
+            if (count % 2 !== 0) {
+                document.querySelector('#button').classList.add("js-green");
+                document.querySelector('#button').classList.remove("js-aqua")
+            }
+            else {
+                document.querySelector('#button').classList.add("js-aqua");
+                document.querySelector('#button').classList.remove("js-green");
+            }
+        }
+        updateCount();
+    </script>
+</body>
+</html>
